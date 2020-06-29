@@ -1,0 +1,9 @@
+version: 2.0
+jobs:
+    build:
+        docker:  # 実行環境を指定
+        - image: circleci/node:latest # 実行環境のdockerのimageを指定circleci/xxは公式で用意されているimage
+        working_directory: ~/repo # コンテナ内の作業ディレクトリ 
+        steps:
+        - checkout # gitプロジェクトをcheckout
+        - run: echo "Hello World" # run:xxはunixコマンドを実行する
